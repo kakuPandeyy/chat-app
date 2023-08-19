@@ -237,7 +237,7 @@ const handleMuteVideo = ()=>{
    
     {callDiaing?
       <div className='remotePerson'> 
-    {  myStreme ? <ReactPlayer width="100%" height="100%" playing="false" url={remoteStreme} />: <h1> not avalaable</h1> }
+    {  myStreme ? <ReactPlayer width="100%" height="100%" playing="false" url={remoteStreme}  />: <h1> not avalaable</h1> }
       </div> : <div className="dialing">
     
      {callingStatus} 
@@ -254,7 +254,7 @@ const handleMuteVideo = ()=>{
 
    <div className="cover"></div>
    <div className="localPerson">
-   <ReactPlayer width="250px" height="250px" playing="false" url={myStreme} /></div>
+   <ReactPlayer width="250px" height="250px" playing="false" url={myStreme} muted="true" /></div>
 
      </CallStyle>
     

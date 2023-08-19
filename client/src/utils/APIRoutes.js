@@ -1,4 +1,4 @@
-export const host = "http://localhost:5000";
+export const host = process.env.REACT_APP_Host;
 export const  registerRoute = `${host}/api/auth/register`
 export const  logInRouter = `${host}/api/auth/login`
 export const  setAvatarRouter = `${host}/api/auth/setAvatar`

@@ -91,7 +91,7 @@ const disconnectButton = ()=>{
    <div className="cover"></div>
     <div className="localPerson">
  
-    {myStreme?<ReactPlayer width="250px" height="250px" playing="false" url={myStreme} />:<h1>sorry not avalaable</h1>}</div>
+    {myStreme?<ReactPlayer width="250px" height="250px" playing="false" url={myStreme} muted="true" />:<h1>sorry not avalaable</h1>}</div>
 
      </CallStyle>
   )

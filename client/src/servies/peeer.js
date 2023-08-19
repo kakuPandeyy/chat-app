@@ -47,7 +47,7 @@ class PeerService {
       if (this.peer) {
         const offer = await this.peer.createOffer();
         await this.peer.setLocalDescription(new RTCSessionDescription(offer));
-        return offer;
+        return offer
       }
     }
   }
