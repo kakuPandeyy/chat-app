@@ -82,13 +82,13 @@ useEffect(()=>{
     
   return (
     <CallStyle> 
-    {callDiaing &&  <div className='remotePerson'>
+      <div className='remotePerson'>
  
-    { remoteStreme  ?   <ReactPlayer width="100%" height="100%" playing="false" url={remoteStreme} />:<h1>sorry not ava</h1> }
+    { remoteStreme!==null  ?   <ReactPlayer width="100%" height="100%" playing="false" url={remoteStreme} />:<h1>sorry not ava</h1> }
 
     </div> 
    
-    }
+    
 
    <div className="disconnect" onClick={disconnectButton}> 
    <MdCallEnd/>
