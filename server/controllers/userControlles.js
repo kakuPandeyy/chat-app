@@ -86,7 +86,7 @@ if(!isPasswordValid){
 
   module.exports.getContact = async (req,res,next)=>{
 try {
-console.log("i am hint");
+
   const contacts = await User.find({_id:{$ne:req.params.id}})
 
 return res.json({contacts})

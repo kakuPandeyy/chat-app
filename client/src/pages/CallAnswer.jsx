@@ -72,8 +72,11 @@ const disconnectButton = ()=>{
   navigation("/")
 }
 useEffect(()=>{
+  if (remoteStreme!==null) {
+    setCallDialing(true)
+  }
+
   console.log("remoteStreme",remoteStreme);
-  
 },[remoteStreme])
 
     

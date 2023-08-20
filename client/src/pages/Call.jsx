@@ -172,7 +172,7 @@ async function statusCheck() {
 
              
               setRemoteStreme(remoteStream[0]);
-              setCallDialing(true)
+              
             });
           }, []);
 
@@ -214,8 +214,12 @@ return ()=>{
 
 
 useEffect(()=>{
-  console.log("remoteStreme",remoteStreme);
   
+  if (remoteStreme!==null) {
+    setCallDialing(true)
+  }
+
+  console.log("remoteStreme",remoteStreme);
 },[remoteStreme])
              
 const disconnectButton = async()=>{
