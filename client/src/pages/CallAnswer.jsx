@@ -71,6 +71,10 @@ const disconnectButton = ()=>{
   peeer.peer.close()
   navigation("/")
 }
+useEffect(()=>{
+  console.log("remoteStreme",remoteStreme);
+  
+},[remoteStreme])
 
     
   return (

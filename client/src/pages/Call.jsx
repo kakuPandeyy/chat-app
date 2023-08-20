@@ -212,7 +212,11 @@ return ()=>{
 }
 },[])
 
+
+useEffect(()=>{
+  console.log("remoteStreme",remoteStreme);
   
+},[remoteStreme])
              
 const disconnectButton = async()=>{
 
@@ -234,27 +238,23 @@ const handleMuteVideo = ()=>{
 
   return (
     <CallStyle> 
-   
-    {callDiaing?
-      <div className='remotePerson'> 
-    {  myStreme ? <ReactPlayer width="100%" height="100%" playing="false" url={remoteStreme}  />: <h1> not avalaable</h1> }
-      </div> : <div className="dialing">
-    
-     {callingStatus} 
-  
-    
+    {callDiaing &&  <div className='remotePerson'>
+ 
+    { remoteStreme  ?   <ReactPlayer width="100%" height="100%" playing="false" url={remoteStreme} />:<h1>sorry not ava</h1> }
+
     </div> 
    
     }
-    <div className="disconnect" onClick={disconnectButton}> 
+
+   <div className="disconnect" onClick={disconnectButton}> 
    <MdCallEnd/>
    </div>
-   <div className="mic" onClick={handleMuteAudio}> <BsMicFill/></div>
-   <div className="video" onClick={handleMuteVideo}> <FaVideo/> </div>
-
+   <div className="mic" > <BsMicFill/></div>
+   <div className="video" > <FaVideo/> </div>
    <div className="cover"></div>
-   <div className="localPerson">
-   <ReactPlayer width="250px" height="250px" playing="false" url={myStreme} muted="true" /></div>
+    <div className="localPerson">
+ 
+    {myStreme?<ReactPlayer width="250px" height="250px" playing="false" url={myStreme} muted="true" />:<h1>sorry not avalaable</h1>}</div>
 
      </CallStyle>
     
